@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>党建工作 - SZTU Continuing Education</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@700;900&amp;family=Inter:wght@300;400;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#00479d",
+                        "ceremonial-red": "#A6192E",
+                        "charcoal": "#1a1a1a",
+                        "gold-accent": "#C5A059",
+                        "surface": "#ffffff",
+                        "background": "#f8fafc"
+                    },
+                    fontFamily: {
+                        "headline": ["Noto Serif SC", "serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-pattern {
+            background-image: radial-gradient(#A6192E 0.5px, transparent 0.5px);
+            background-size: 24px 24px;
+            opacity: 0.05;
+        }
+        .parallax-bg {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .gradient-overlay-red {
+            background: linear-gradient(135deg, rgba(166, 25, 46, 0.95) 0%, rgba(166, 25, 46, 0.7) 50%, rgba(255, 255, 255, 0.1) 100%);
+        }
+    </style>
+</head>
+<body class="bg-[#fcfcfc] text-slate-900 font-body">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-3xl border-b border-[#00479d]/10 shadow-lg shadow-blue-900/5">
+<div class="flex justify-between items-center px-8 h-20 max-w-[1440px] mx-auto">
+<div class="text-xl font-bold text-[#00479d] tracking-tight flex items-center gap-3">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">account_balance</span>
+            SZTU Continuing Education
+        </div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-slate-600 hover:text-[#00479d] transition-colors font-label text-xs uppercase tracking-[0.4em]" href="#">College Overview</a>
+<a class="text-slate-600 hover:text-[#00479d] transition-colors font-label text-xs uppercase tracking-[0.4em]" href="#">Non-degree Education</a>
+<a class="text-slate-600 hover:text-[#00479d] transition-colors font-label text-xs uppercase tracking-[0.4em]" href="#">Academic Programs</a>
+<a class="text-slate-600 hover:text-[#00479d] transition-colors font-label text-xs uppercase tracking-[0.4em]" href="#">Admissions</a>
+<a class="text-slate-600 hover:text-[#00479d] transition-colors font-label text-xs uppercase tracking-[0.4em]" href="#">News</a>
+</div>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-slate-600 cursor-pointer hover:text-primary transition-colors">search</span>
+<button class="bg-primary text-white px-6 py-2.5 text-xs font-bold uppercase tracking-[0.2em] rounded-sm shadow-sm active:scale-95 duration-200">
+                Student Portal
+            </button>
+</div>
+</div>
+</nav>
+<!-- Hero Section (Modified) -->
+<header class="relative h-[60vh] flex items-center overflow-hidden bg-ceremonial-red pt-20">
+<div class="absolute inset-0 parallax-bg opacity-40 grayscale" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDDOCw_8Juv4M9hFICixKIT-gLOKS4JZiskNfddMxiZ12PwXN0L9-8G0PZ1kkr6hCvTXK4pvpS5m449h1VIdeca5Mkx2SR_YZt1DdF5rp-RHzuK-4_MI6NFNG8TAXBzFK39xMlzkSlhtJXRM4GhpVgOaAzyEzuQGBQFV4G73qFRdLljMjkDfkykrAfFDJZEciqS_3-1NpjWtYqGHT7MUHjGv2frzp9ixJ6TNFBDz1BNVFJpSISbcVWrn6RwtVt4JfrwkD_PXQjO0QjR');"></div>
+<div class="absolute inset-0 gradient-overlay-red"></div>
+<div class="container mx-auto px-12 relative z-10">
+<div class="max-w-4xl">
+<div class="flex items-center gap-4 mb-8">
+<span class="h-[1px] w-12 bg-white/60"></span>
+<span class="font-label text-white text-xs font-bold uppercase tracking-[0.6em]">Red Engine for Excellence</span>
+</div>
+<h1 class="text-6xl md:text-7xl font-headline font-black text-white leading-[1.1] mb-8">
+                筑基明理 <br/>
+                党建领航
+            </h1>
+<p class="text-white/90 text-lg font-light leading-relaxed max-w-2xl border-l-4 border-gold-accent pl-8">
+                坚持党对教育工作的全面领导，以高质量党建引领学院继续教育事业跨越式发展�?            </p>
+</div>
+</div>
+</header>
+<!-- Main Grid Section -->
+<main class="relative bg-white pb-32">
+<!-- Subtle Background Elements -->
+<div class="absolute inset-0 bg-pattern pointer-events-none"></div>
+<div class="absolute top-0 right-0 w-1/3 h-full border-l border-slate-100/50 pointer-events-none"></div>
+<div class="max-w-[1440px] mx-auto px-12 pt-24">
+<!-- Section Header (Modified Title) -->
+<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+<div class="relative">
+<span class="text-7xl font-black text-slate-50 absolute -top-12 -left-8 select-none uppercase">Party</span>
+<h2 class="text-4xl font-headline font-bold text-charcoal relative z-10 flex items-center gap-4">
+<span class="w-2 h-10 bg-ceremonial-red"></span>
+                    党建工作
+                    <span class="font-label text-xs text-slate-400 font-normal tracking-[0.4em] ml-4 uppercase">Party Building Work</span>
+</h2>
+</div>
+<div class="flex gap-6 border-b border-slate-200 pb-2">
+<a class="text-xs font-bold uppercase tracking-widest text-ceremonial-red border-b-2 border-ceremonial-red pb-2" href="#">全部</a>
+<a class="text-xs font-bold uppercase tracking-widest text-slate-400 hover:text-ceremonial-red transition-colors pb-2" href="#">党建新闻</a>
+<a class="text-xs font-bold uppercase tracking-widest text-slate-400 hover:text-ceremonial-red transition-colors pb-2" href="#">通知公告</a>
+<a class="text-xs font-bold uppercase tracking-widest text-slate-400 hover:text-ceremonial-red transition-colors pb-2" href="#">学习专题</a>
+</div>
+</div>
+<!-- Editorial Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-10">
+<!-- Feature Item (Large) -->
+<article class="md:col-span-8 group relative bg-charcoal overflow-hidden shadow-2xl">
+<div class="aspect-video w-full overflow-hidden">
+<img alt="News feature" class="w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-1000 grayscale group-hover:grayscale-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiUc1Jq7dxrK9MPN7olcPYDModyedc_2FHUBzh4JUYEnuwYLFm6iLERCVrBpVB00guKQrDxx4W9l0jkeTAyHxQYihPO-JktzswsZVo_XizZchRYMiBOdcK4MQrho4FVC508IeWe-KPl3CXzAX_jRqHdUhIioohJMwZfEjMUXG4fKY5GXJsKdoqtvE4cyzlPFxL79T9NDaGoH0fRGeXmN6Oe3hEkkveqDbgSfCbhWjTkJ8cgsdH4yHKBrLBH4Ipor9zQ0eW1b3gEdHv"/>
+</div>
+<div class="absolute bottom-0 left-0 w-full p-12 bg-gradient-to-t from-charcoal via-charcoal/80 to-transparent">
+<div class="flex items-center gap-4 mb-6">
+<span class="bg-ceremonial-red text-white text-xs font-bold px-4 py-1 tracking-widest uppercase">Special Report</span>
+<span class="text-slate-400 text-xs tracking-widest">2024.10.24</span>
+</div>
+<h3 class="text-3xl md:text-4xl font-headline font-bold text-white mb-6 group-hover:text-gold-accent transition-colors leading-tight">
+                        学院党委理论学习中心组召开扩大会议 深入学习贯彻党的最新指示精�?                    </h3>
+<p class="text-slate-400 text-sm font-light max-w-2xl leading-relaxed line-clamp-2">
+                        会议强调，全体党员干部要深刻领悟“两个确立”的决定性意义，增强“四个意识”、坚定“四个自信”、做到“两个维护”，将党建工作与继续教育业务深度融合�?                    </p>
+</div>
+</article>
+<!-- Side Items (Typographic Focus) -->
+<div class="md:col-span-4 flex flex-col gap-10">
+<article class="bg-white border border-slate-100 p-8 shadow-sm hover:shadow-xl transition-all duration-500 border-t-4 border-t-gold-accent relative">
+<span class="text-slate-100 text-5xl font-black absolute top-4 right-6 select-none italic">01</span>
+<div class="text-ceremonial-red text-xs font-bold uppercase tracking-widest mb-4">学习专题</div>
+<h3 class="text-xl font-headline font-bold text-charcoal mb-4 hover:text-ceremonial-red transition-colors cursor-pointer leading-snug">
+                        “红色大讲堂”开讲：技术大学在现代化建设中的使命与担当
+                    </h3>
+<p class="text-slate-500 text-xs leading-relaxed mb-6">
+                        本期讲座特邀知名专家就“产教融合背景下的党建创新”进行专题讲�?..
+                    </p>
+<a class="text-xs font-black uppercase tracking-[0.2em] border-b border-charcoal/10 hover:border-ceremonial-red transition-all pb-1 inline-block" href="#">Explore More</a>
+</article>
+<article class="bg-slate-50 p-8 shadow-sm hover:shadow-xl transition-all duration-500 relative group overflow-hidden">
+<div class="absolute -right-4 -bottom-4 opacity-5 group-hover:scale-125 transition-transform duration-500">
+<span class="material-symbols-outlined text-9xl">notifications_active</span>
+</div>
+<div class="text-ceremonial-red text-xs font-bold uppercase tracking-widest mb-4">通知公告</div>
+<h3 class="text-xl font-headline font-bold text-charcoal mb-4 hover:text-ceremonial-red transition-colors cursor-pointer leading-snug">
+                        关于开�?024年度“优秀共产党员”评选工作的通知
+                    </h3>
+<p class="text-slate-500 text-xs leading-relaxed mb-6">
+                        为表彰先进，树立典范，经学院党委研究决定，现启动年度评优工作�?                    </p>
+<div class="flex justify-between items-center">
+<span class="text-slate-400 text-xs tracking-widest">OCT 12, 2024</span>
+<span class="material-symbols-outlined text-ceremonial-red text-lg">arrow_forward</span>
+</div>
+</article>
+</div>
+<!-- Row 2: Secondary Content -->
+<article class="md:col-span-4 group">
+<div class="aspect-[4/3] overflow-hidden bg-slate-100 mb-6">
+<img alt="News thumb" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPyPnmFYOaGPbzfIlAISpsXVxfzq0g4NlfhRvKCWDTetW178pI2phQB8zIdW4-bggKJUsF58qr-YK2ZoLMMTS9iFgDjh8ZGoqtChjq8XUC8PIUcQLOxEUn7UsZDdwlcZnBI34y3oksguhbvYFEF3cd0HNohl7jIKrBBNTP71svOyM5RQT_Dp6LkcOJc77mtmugtnzFEBWnJB2D9Ucxc8aHARY2beaOxBFgxTphzxhUg_4ATsHhEJvR1MZcZm2rV4WYBFq64JA4rENc"/>
+</div>
+<div class="text-xs font-bold text-gold-accent tracking-[0.3em] uppercase mb-3">支部风采</div>
+<h3 class="text-2xl font-headline font-bold text-charcoal group-hover:text-ceremonial-red transition-colors mb-4">实地调研：在产教融合基地重温入党誓词</h3>
+<p class="text-slate-500 text-sm font-light leading-relaxed">深入一线企业开展党日活动，将党性教育延伸至生产科研最前沿...</p>
+</article>
+<article class="md:col-span-8 flex flex-col md:flex-row gap-8 bg-charcoal text-white p-12 relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-64 h-64 bg-ceremonial-red opacity-10 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:scale-150 transition-transform duration-1000"></div>
+<div class="flex-1 relative z-10">
+<div class="text-gold-accent text-xs font-bold uppercase tracking-widest mb-6">纪律教育</div>
+<h3 class="text-3xl font-headline font-bold mb-6">严守政治规矩 筑牢廉洁防线：全院党员干部党风廉政建设专题党�?/h3>
+<p class="text-slate-400 text-sm font-light leading-relaxed mb-8">
+                        会议强调，必须持之以恒正风肃纪，把纪律建设摆在更加突出的位置，构建风清气正的校园政治生态�?                    </p>
+<button class="flex items-center gap-4 text-xs font-bold uppercase tracking-[0.2em] border-b border-white/20 pb-2 hover:text-gold-accent hover:border-gold-accent transition-all">
+                        Full Documentation
+                    </button>
+</div>
+<div class="w-full md:w-1/3 aspect-[3/4] overflow-hidden relative z-10 shadow-2xl">
+<img alt="News detail" class="w-full h-full object-cover opacity-60" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDOCw_8Juv4M9hFICixKIT-gLOKS4JZiskNfddMxiZ12PwXN0L9-8G0PZ1kkr6hCvTXK4pvpS5m449h1VIdeca5Mkx2SR_YZt1DdF5rp-RHzuK-4_MI6NFNG8TAXBzFK39xMlzkSlhtJXRM4GhpVgOaAzyEzuQGBQFV4G73qFRdLljMjkDfkykrAfFDJZEciqS_3-1NpjWtYqGHT7MUHjGv2frzp9ixJ6TNFBDz1BNVFJpSISbcVWrn6RwtVt4JfrwkD_PXQjO0QjR"/>
+</div>
+</article>
+</div>
+<!-- Pagination -->
+<div class="mt-32 flex justify-center items-center gap-4">
+<button class="w-12 h-12 flex items-center justify-center border border-slate-200 text-slate-400 hover:bg-ceremonial-red hover:text-white hover:border-ceremonial-red transition-all duration-300">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-12 h-12 flex items-center justify-center bg-ceremonial-red text-white font-bold text-sm shadow-xl shadow-ceremonial-red/20">1</button>
+<button class="w-12 h-12 flex items-center justify-center border border-slate-200 text-slate-600 hover:border-ceremonial-red hover:text-ceremonial-red transition-all duration-300 text-sm font-bold">2</button>
+<button class="w-12 h-12 flex items-center justify-center border border-slate-200 text-slate-600 hover:border-ceremonial-red hover:text-ceremonial-red transition-all duration-300 text-sm font-bold">3</button>
+<button class="w-12 h-12 flex items-center justify-center border border-slate-200 text-slate-400 hover:bg-ceremonial-red hover:text-white hover:border-ceremonial-red transition-all duration-300">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t-4 border-[#00479d] bg-[#f8fafc]">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-16 max-w-[1440px] mx-auto">
+<div class="md:col-span-1">
+<div class="text-2xl font-black text-[#0a1f44] uppercase mb-6">SZTU CE</div>
+<p class="text-slate-500 text-xs font-body font-light leading-relaxed">
+                Continuing Education Department at Shenzhen Technology University. Fostering innovation through lifelong learning.
+            </p>
+</div>
+<div>
+<h4 class="font-label text-[9px] font-bold tracking-[0.5em] text-[#00479d] uppercase mb-8">Navigation</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-500 text-xs hover:text-[#00479d] transition-transform hover:translate-x-1 inline-block" href="#">College Overview</a></li>
+<li><a class="text-slate-500 text-xs hover:text-[#00479d] transition-transform hover:translate-x-1 inline-block" href="#">Non-degree Education</a></li>
+<li><a class="text-slate-500 text-xs hover:text-[#00479d] transition-transform hover:translate-x-1 inline-block" href="#">Academic Programs</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label text-[9px] font-bold tracking-[0.5em] text-[#00479d] uppercase mb-8">Quick Links</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-500 text-xs hover:text-[#00479d] transition-transform hover:translate-x-1 inline-block" href="#">Contact Us</a></li>
+<li><a class="text-slate-500 text-xs hover:text-[#00479d] transition-transform hover:translate-x-1 inline-block" href="#">Campus Map</a></li>
+<li><a class="text-slate-500 text-xs hover:text-[#00479d] transition-transform hover:translate-x-1 inline-block" href="#">Accessibility</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label text-[9px] font-bold tracking-[0.5em] text-[#00479d] uppercase mb-8">Newsletter</h4>
+<div class="flex flex-col gap-4">
+<input class="bg-white border border-slate-200 text-xs p-3 focus:ring-1 focus:ring-primary outline-none" placeholder="Email Address" type="email"/>
+<button class="bg-[#0a1f44] text-white text-xs font-bold uppercase tracking-widest py-3">Subscribe</button>
+</div>
+</div>
+</div>
+<div class="max-w-[1440px] mx-auto px-12 py-8 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-4">
+<span class="text-slate-400 text-xs font-body">© 2024 SZTU Continuing Education. All Rights Reserved. Architectural Precision in Pedagogy.</span>
+<div class="flex gap-6">
+<a class="text-slate-400 hover:text-primary" href="#"><span class="material-symbols-outlined text-lg">public</span></a>
+<a class="text-slate-400 hover:text-primary" href="#"><span class="material-symbols-outlined text-lg">mail</span></a>
+</div>
+</div>
+</footer>
+</body></html>

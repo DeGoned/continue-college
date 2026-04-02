@@ -2,6 +2,65 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize Lucide icons
     lucide.createIcons();
 
+    // Mobile drawer navigation
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileNav = document.getElementById('mobileNav');
+    const mobileNavPanel = document.getElementById('mobileNavPanel');
+    const mobileNavOverlay = document.getElementById('mobileNavOverlay');
+    const closeMobileNav = document.getElementById('closeMobileNav');
+
+    if (mobileMenuBtn && mobileNav && mobileNavPanel) {
+        function openMobileNav() {
+            mobileNav.classList.remove('hidden');
+            requestAnimationFrame(() => {
+                mobileNavOverlay && mobileNavOverlay.classList.remove('opacity-0');
+                mobileNavPanel.classList.remove('translate-x-full');
+            });
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeDrawer() {
+            mobileNavOverlay && mobileNavOverlay.classList.add('opacity-0');
+            mobileNavPanel.classList.add('translate-x-full');
+            setTimeout(() => {
+                mobileNav.classList.add('hidden');
+            }, 250);
+            document.body.style.overflow = '';
+        }
+
+        mobileMenuBtn.addEventListener('click', openMobileNav);
+        if (mobileNavOverlay) mobileNavOverlay.addEventListener('click', closeDrawer);
+        if (closeMobileNav) closeMobileNav.addEventListener('click', closeDrawer);
+
+        mobileNav.querySelectorAll('[data-mobile-submenu-toggle]').forEach(toggle => {
+            const content = toggle.nextElementSibling;
+            const icon = toggle.querySelector('[data-mobile-submenu-icon]');
+
+            toggle.addEventListener('click', () => {
+                const isOpen = toggle.getAttribute('aria-expanded') === 'true';
+                toggle.setAttribute('aria-expanded', String(!isOpen));
+
+                if (content) {
+                    content.classList.toggle('hidden', isOpen);
+                }
+
+                if (icon) {
+                    icon.classList.toggle('rotate-180', !isOpen);
+                }
+            });
+        });
+
+        mobileNav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', closeDrawer);
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && !mobileNav.classList.contains('hidden')) {
+                closeDrawer();
+            }
+        });
+    }
+
     // Initialize Calendar Carousel
     const calendarNode = document.getElementById('calendar-embla');
     if (calendarNode) {
@@ -28,6 +87,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (prevBtn) prevBtn.addEventListener('click', () => facultyEmbla.scrollPrev());
         if (nextBtn) nextBtn.addEventListener('click', () => facultyEmbla.scrollNext());
+    }
+
+    // Search Modal
+    const searchBtn = document.getElementById('searchBtn');
+    const searchModal = document.getElementById('searchModal');
+    const closeSearch = document.getElementById('closeSearch');
+    const searchOverlay = document.getElementById('searchOverlay');
+    const searchInput = document.getElementById('searchInput');
+
+    if (searchBtn && searchModal) {
+        searchBtn.addEventListener('click', function() {
+            searchModal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+            setTimeout(() => searchInput && searchInput.focus(), 100);
+        });
+
+        function closeModal() {
+            searchModal.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        if (closeSearch) closeSearch.addEventListener('click', closeModal);
+        if (searchOverlay) searchOverlay.addEventListener('click', closeModal);
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && !searchModal.classList.contains('hidden')) {
+                closeModal();
+            }
+        });
     }
 
     // Navbar scroll effect

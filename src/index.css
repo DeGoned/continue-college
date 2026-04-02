@@ -20,6 +20,9 @@
   html {
     @apply overflow-x-hidden w-full m-0 p-0;
   }
+  p, span, a, li, td, th, label, input, button, div {
+    min-font-size: 12px;
+  }
 }
 
 @layer utilities {
