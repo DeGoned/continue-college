@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>乐龄教育 - 深圳技术大学继续教育学院</title>
+    <title>工匠精神：深技大优秀毕业生纪实 - 深圳技术大学继续教育学院</title>
     <link rel="stylesheet" href="/src/index.css">
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
@@ -256,85 +256,80 @@
     </div>
 
     <main class="bg-[#f8f9fb]">
-      <section class="relative overflow-hidden z-10 pt-40 pb-28">
+      <!-- 简化版 Banner -->
+      <section class="relative overflow-hidden z-10 pt-32 pb-16">
         <div class="absolute inset-0 z-0">
-          <img src="/img/banner1.jpg" alt="Banner Background" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&q=80&w=2000'; this.onerror=null;" />
+          <img src="/img/banner1.jpg" alt="Banner Background" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&amp;fit=crop&amp;q=80&amp;w=2000'; this.onerror=null;" />
           <div class="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/80 to-sztu-blue/90"></div>
         </div>
-        <div class="absolute top-0 left-0 w-full h-full overflow-hidden z-0 pointer-events-none mix-blend-overlay">
-          <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 40px 40px;"></div>
-          <div class="absolute -top-40 -right-40 w-96 h-96 bg-white/20 rounded-full blur-3xl"></div>
-          <div class="absolute -bottom-20 -left-20 w-80 h-80 bg-white/10 rounded-full blur-3xl"></div>
-        </div>
         <div class="container mx-auto px-8 lg:px-16 flex flex-col items-center text-center relative z-10">
-          <h2 class="text-5xl lg:text-6xl font-serif font-bold text-white mb-6 tracking-widest text-glow-light drop-shadow-md">乐龄教育</h2>
-          <div class="flex items-center justify-center gap-6">
-            <div class="w-16 h-[2px] bg-gradient-to-r from-transparent to-white/50"></div>
-            <span class="text-white/90 font-bold text-sm tracking-[0.6em] uppercase block">Senior Education</span>
-            <div class="w-16 h-[2px] bg-gradient-to-l from-transparent to-white/50"></div>
-          </div>
+          <h2 class="text-3xl lg:text-4xl font-serif font-bold text-white mb-3 tracking-wider drop-shadow-md">人才培养</h2>
+          <span class="text-white/80 font-bold text-xs tracking-[0.5em] uppercase block">Talent Development</span>
         </div>
       </section>
 
-      <section class="container mx-auto px-8 lg:px-16 py-16 relative z-10">
-        <div class="flex flex-col lg:flex-row gap-12">
-          <aside class="w-full lg:w-64 flex-shrink-0 relative z-20">
-            <div class="bg-white sticky top-32 shadow-sm relative">
-              <div class="absolute top-0 left-0 w-[3px] h-full bg-sztu-blue"></div>
-              <div class="p-8">
-                <div class="border-b-[2px] border-primary/10 pb-6 mb-6">
-                  <h3 class="text-2xl font-bold text-sztu-blue mb-2">非学历教育</h3>
-                  <span class="text-sztu-blue font-bold text-xs tracking-widest uppercase block">NON-DEGREE</span>
-                </div>
-                <ul class="space-y-1">
-                  <li>
-                    <a href="golden-years.html" class="flex items-center gap-4 px-4 py-4 text-sm text-primary/60 hover:bg-[#f8f9fb] hover:text-primary transition-colors">
-                      <i data-lucide="award" class="w-4 h-4"></i>
-                      <span>金色年华</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="senior-education.html" class="flex items-center gap-4 px-4 py-4 text-sm font-bold text-sztu-blue bg-[#f8f9fb] border-l-2 border-sztu-blue relative -ml-[2px]">
-                      <i data-lucide="user-plus" class="w-4 h-4"></i>
-                      <span>乐龄教育</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </aside>
+      <!-- 面包屑 + 文章卡片 -->
+      <section class="container mx-auto px-8 lg:px-16 py-12 relative z-10">
+        <div class="max-w-[880px] mx-auto">
+          <!-- 面包屑 -->
+          <nav class="text-primary/50 text-sm flex items-center gap-2 mb-6">
+            <a href="index.html" class="hover:text-primary transition-colors">首页</a>
+            <span>›</span>
+            <a href="talent-development.html" class="hover:text-primary transition-colors">人才培养</a>
+            <span>›</span>
+            <span class="text-primary/70">工匠精神：深技大优秀毕业生纪实</span>
+          </nav>
 
-          <div class="flex-1 relative z-10">
-            <div class="absolute top-[0px] -right-10 text-[220px] font-black text-gray-200/50 select-none pointer-events-none tracking-tighter -z-10 leading-none" style="font-family: 'Arial Black', Impact, sans-serif;">
-              SENIOR
-            </div>
-            <div class="mb-10 relative z-20">
-              <h2 class="text-4xl font-serif text-primary mb-2">乐龄教育</h2>
-              <span class="text-primary/40 text-xs font-bold tracking-[0.3em] uppercase block">SENIOR EDUCATION</span>
-            </div>
+          <!-- 文章卡片 -->
+          <article class="bg-white shadow-sm p-8 lg:p-12">
+            <h1 class="text-3xl lg:text-4xl font-serif font-bold text-primary leading-tight mb-6">
+              工匠精神：深技大优秀毕业生纪实
+            </h1>
 
-            <div class="bg-white p-10 shadow-sm mb-8 relative z-20">
-              <div class="flex items-start gap-6">
-                <div class="w-20 h-20 bg-sztu-blue/10 flex items-center justify-center text-sztu-blue rounded-sm flex-shrink-0">
-                  <i data-lucide="heart" class="w-10 h-10"></i>
-                </div>
-                <div>
-                  <h3 class="text-2xl font-serif font-bold text-primary mb-4">终身学习的优雅实践</h3>
-                  <p class="text-deep-black/70 leading-relaxed mb-4">
-                    "乐龄教育"项目专为55岁以上长者设计，秉承"活到老、学到老”的理念，致力于为老年朋友搭建一个温馨、有趣的学习平台。我们相信，学习不仅是获取知识，更是保持活力、丰富生活的重要方式。
-                  </p>
-                  <p class="text-deep-black/70 leading-relaxed">
-                    项目课程涵盖智能手机应用、摄影艺术、书法绘画、养生保健等多个领域，由资深教师授课，让每一位老年学员都能找到属于自己的兴趣天地。
-                  </p>
-                </div>
-              </div>
+            <!-- 元信息行 -->
+            <div class="flex flex-wrap items-center gap-x-5 gap-y-2 text-primary/50 text-sm">
+              <span class="flex items-center gap-1.5">
+                <i data-lucide="newspaper" class="w-4 h-4"></i>
+                <span>来源：学院办公室</span>
+              </span>
+              <span class="text-primary/20">|</span>
+              <span class="flex items-center gap-1.5">
+                <i data-lucide="pen-tool" class="w-4 h-4"></i>
+                <span>作者：宣传科</span>
+              </span>
+              <span class="text-primary/20">|</span>
+              <span class="flex items-center gap-1.5">
+                <i data-lucide="eye" class="w-4 h-4"></i>
+                <span>点击数：1,234</span>
+              </span>
+              <span class="text-primary/20">|</span>
+              <span class="flex items-center gap-1.5">
+                <i data-lucide="calendar" class="w-4 h-4"></i>
+                <span>发布时间：2024.11.20</span>
+              </span>
             </div>
 
-          </div>
+            <div class="border-t border-primary/10 my-8"></div>
+
+            <!-- 视频占位区 -->
+            <div class="relative aspect-video bg-primary/5 flex items-center justify-center">
+              <i data-lucide="play-circle" class="w-20 h-20 text-primary/30"></i>
+            </div>
+            <p class="text-primary/30 text-xs text-center mt-3">演示版本，视频暂未接入</p>
+
+            <div class="border-t border-primary/10 mt-8 mb-6"></div>
+
+            <!-- 返回栏目 -->
+            <a href="talent-development.html" class="inline-flex items-center gap-2 text-primary/60 hover:text-primary transition-colors text-sm">
+              <i data-lucide="chevron-left" class="w-4 h-4"></i>
+              <span>返回栏目</span>
+            </a>
+          </article>
         </div>
       </section>
     </main>
 
+    <!-- Footer -->
     <footer class="bg-primary text-white pt-32 pb-12 relative overflow-hidden">
       <div class="absolute inset-0 opacity-[0.03] pointer-events-none" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 40px 40px;"></div>
       <div class="container mx-auto px-8 lg:px-16 relative z-10">
@@ -385,6 +380,11 @@
         </div>
         <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/40 uppercase tracking-widest">
           <p>© 2024 Shenzhen Technology University. All Rights Reserved.</p>
+          <div class="flex gap-8">
+            <a class="hover:text-white transition-colors" href="#">隐私政策</a>
+            <a class="hover:text-white transition-colors" href="#">服务条款</a>
+            <a class="hover:text-white transition-colors" href="#">网站地图</a>
+          </div>
         </div>
       </div>
     </footer>
