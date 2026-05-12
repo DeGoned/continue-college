@@ -1,6 +1,10 @@
+import { createIcons, icons } from 'lucide';
+import EmblaCarousel from 'embla-carousel';
+import EmblaCarouselAutoplay from 'embla-carousel-autoplay';
+
 document.addEventListener('DOMContentLoaded', () => {
-    // Initialize Lucide icons
-    lucide.createIcons();
+    // Initialize Lucide icons (bundled — no CDN)
+    createIcons({ icons });
 
     // Mobile drawer navigation
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
