@@ -14,8 +14,8 @@ export default defineConfig({
     rollupOptions: {
       input: Object.fromEntries(
         glob
-          .sync('*.html', { ignore: ['*_online.html'] })
-          .map(file => [file.replace('.html', ''), path.resolve(__dirname, file)])
+          .sync(['*.html', 'en/*.html'], { ignore: ['*_online.html', 'en/*_online.html'] })
+          .map(file => [file.replace(/\.html$/, '').replace(/\//g, '-'), path.resolve(__dirname, file)])
       ),
     },
   },
