@@ -1,10 +1,14 @@
 import { createIcons, icons } from 'lucide';
 import EmblaCarousel from 'embla-carousel';
 import EmblaCarouselAutoplay from 'embla-carousel-autoplay';
+import { getTeacherById } from './teachers.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize Lucide icons (bundled — no CDN)
     createIcons({ icons });
+
+    // Teacher detail page renderer — only runs on teacher-detail.html
+    renderTeacherDetail();
 
     // Mobile drawer navigation
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
@@ -134,3 +138,88 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+/**
+ * Render the teacher-detail.html page from URL ?id=... and the TEACHERS data.
+ *
+ * No-ops when the page is not teacher-detail.html (we detect by the
+ * [data-teacher-root] root element). Falls back to a visible "not found"
+ * section when the id is missing or unknown — never silently blank.
+ */
+function renderTeacherDetail() {
+    const root = document.querySelector('[data-teacher-root]');
+    if (!root) return;
+
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get('id');
+    const teacher = getTeacherById(id);
+
+    const hero = document.getElementById('teacher-hero');
+    const body = document.getElementById('teacher-body');
+    const notFound = document.getElementById('teacher-not-found');
+
+    if (!teacher) {
+        notFound && notFound.classList.remove('hidden');
+        return;
+    }
+
+    hero && hero.classList.remove('hidden');
+    body && body.classList.remove('hidden');
+
+    document.title = `${teacher.name} ${teacher.honorific} - 深圳技术大学继续教育学院`;
+
+    const fields = root.querySelectorAll('[data-teacher-field]');
+    fields.forEach(el => {
+        const key = el.getAttribute('data-teacher-field');
+        switch (key) {
+            case 'photo':
+                el.setAttribute('src', teacher.photo);
+                el.setAttribute('alt', `${teacher.name} ${teacher.honorific}`);
+                break;
+            case 'email':
+                el.textContent = teacher.email;
+                el.setAttribute('href', `mailto:${teacher.email}`);
+                break;
+            case 'tags':
+                el.replaceChildren(...teacher.tags.map(tag => {
+                    const chip = document.createElement('span');
+                    chip.className = 'px-3 py-1 text-xs tracking-widest uppercase border border-white/20 text-white/70';
+                    chip.textContent = tag;
+                    return chip;
+                }));
+                break;
+            case 'achievements':
+                el.replaceChildren(...teacher.achievements.map(text => {
+                    const li = document.createElement('li');
+                    li.className = 'flex gap-4';
+                    const dot = document.createElement('span');
+                    dot.className = 'inline-block w-1.5 h-1.5 rounded-full bg-primary/40 mt-2.5 shrink-0';
+                    const span = document.createElement('span');
+                    span.textContent = text;
+                    li.append(dot, span);
+                    return li;
+                }));
+                break;
+            case 'courses':
+                el.replaceChildren(...teacher.courses.map(text => {
+                    const li = document.createElement('li');
+                    li.className = 'flex items-center gap-3 border border-primary/10 bg-white px-5 py-4';
+                    const icon = document.createElement('i');
+                    icon.setAttribute('data-lucide', 'book-open');
+                    icon.className = 'w-4 h-4 text-primary/40 shrink-0';
+                    const span = document.createElement('span');
+                    span.textContent = text;
+                    li.append(icon, span);
+                    return li;
+                }));
+                break;
+            default:
+                if (typeof teacher[key] === 'string') {
+                    el.textContent = teacher[key];
+                }
+        }
+    });
+
+    // Re-render Lucide icons we just injected (achievements/courses dots are pure HTML, but courses use <i data-lucide>)
+    createIcons({ icons });
+}
