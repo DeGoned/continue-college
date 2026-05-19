@@ -1,20 +1,59 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# continue-college
 
-# Run and deploy your AI Studio app
+Multi-page static site for a continuing-education college, built with Vite 6 + Tailwind CSS 4. Vanilla JS, no framework.
 
-This contains everything you need to run your app locally.
+Live: **https://cloudmake.top**
 
-View your app in AI Studio: https://ai.studio/apps/663f9f4e-f3dc-4020-adc0-b1180e8a394a
+## Quick start
 
-## Run Locally
+```bash
+npm install
+npm run dev      # http://localhost:3000
+```
 
-**Prerequisites:**  Node.js
+No environment variables required.
 
+## Build
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+```bash
+npm run build    # outputs to dist/
+npm run preview  # serve dist/ locally
+```
+
+## Deploy
+
+Auto-deploys on `git push origin main` via Vercel GitHub integration.
+
+Manual: `npx vercel --prod --yes`
+
+## Project layout
+
+```
+.
+├── *.html              # one page = one HTML file (Vite multi-entry)
+├── en/*.html           # English mirror of each zh page
+├── *_online.html       # simplified online-only variants (excluded from Vite build)
+├── src/
+│   ├── main.js         # single shared JS bundle (icons, carousels, teacher renderer)
+│   ├── teachers.js     # TEACHERS map for teacher-detail.html?id=<id>
+│   └── index.css       # Tailwind + theme tokens + utilities
+├── public/             # static assets (images, icons)
+├── vite.config.ts
+└── vercel.json
+```
+
+For architecture details, see [CLAUDE.md](./CLAUDE.md).
+
+## Adding a teacher
+
+Edit `src/teachers.js`, append a profile under a new key. Then link to it from anywhere:
+
+```html
+<a href="teacher-detail.html?id=your-new-id">...</a>
+```
+
+Sections (achievements / courses / email / office) auto-hide if empty, so admin/leadership profiles can omit academic fields.
+
+## Adding a page
+
+Drop a new `.html` at the project root (or under `en/` for English version). Vite picks it up on the next build automatically.
