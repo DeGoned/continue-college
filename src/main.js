@@ -180,39 +180,21 @@ function renderTeacherDetail() {
                 el.textContent = teacher.email;
                 el.setAttribute('href', `mailto:${teacher.email}`);
                 break;
-            case 'tags':
-                el.replaceChildren(...teacher.tags.map(tag => {
-                    const chip = document.createElement('span');
-                    chip.className = 'px-3 py-1 text-xs tracking-widest uppercase border border-white/20 text-white/70';
-                    chip.textContent = tag;
-                    return chip;
-                }));
-                break;
             case 'achievements':
-                el.replaceChildren(...teacher.achievements.map(text => {
+            case 'courses': {
+                const items = teacher[key] || [];
+                el.replaceChildren(...items.map(text => {
                     const li = document.createElement('li');
-                    li.className = 'flex gap-4';
+                    li.className = 'flex gap-3';
                     const dot = document.createElement('span');
-                    dot.className = 'inline-block w-1.5 h-1.5 rounded-full bg-primary/40 mt-2.5 shrink-0';
+                    dot.className = 'inline-block w-1.5 h-1.5 rounded-full bg-deep-black/40 mt-2.5 shrink-0';
                     const span = document.createElement('span');
                     span.textContent = text;
                     li.append(dot, span);
                     return li;
                 }));
                 break;
-            case 'courses':
-                el.replaceChildren(...teacher.courses.map(text => {
-                    const li = document.createElement('li');
-                    li.className = 'flex items-center gap-3 border border-primary/10 bg-white px-5 py-4';
-                    const icon = document.createElement('i');
-                    icon.setAttribute('data-lucide', 'book-open');
-                    icon.className = 'w-4 h-4 text-primary/40 shrink-0';
-                    const span = document.createElement('span');
-                    span.textContent = text;
-                    li.append(icon, span);
-                    return li;
-                }));
-                break;
+            }
             default:
                 if (typeof teacher[key] === 'string') {
                     el.textContent = teacher[key];
