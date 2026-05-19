@@ -117,6 +117,57 @@ export const TEACHERS = {
     courses: ['深度学习与计算机视觉', '生成式 AI 应用实战', 'AI 工程化部署'],
     email: 'lin.xiaoyue@sztu.edu.cn',
     office: '人工智能学院 E 栋 506'
+  },
+
+  // ====== 现任领导（行政岗）======
+  // achievements / courses 留空表示模板会自动隐藏对应区块
+
+  'zhang-ming': {
+    name: '张明',
+    honorific: '教授',
+    position: '院长、党支部书记',
+    photo: '/img/person-1.jpg',
+    bio: '全面负责学院行政与党建工作，统筹学院发展战略规划与重大事项决策。长期致力于继续教育模式创新与管理，在终身教育体系构建、产教融合等领域具有丰富的理论研究与实践经验。',
+    achievements: [],
+    courses: [],
+    email: '',
+    office: '院办公楼 A 101'
+  },
+
+  'li-xiao': {
+    name: '李晓',
+    honorific: '副教授',
+    position: '副院长（分管学历教育）',
+    photo: '/img/person-3.jpg',
+    bio: '分管学历教育部、招生办公室及教务部工作，负责教学质量监控与师资队伍建设。在成人高等教育、自学考试及现代远程教育的教学管理与质量保障方面具有深厚造诣。',
+    achievements: [],
+    courses: [],
+    email: '',
+    office: '院办公楼 A 103'
+  },
+
+  'wang-jian': {
+    name: '王建',
+    honorific: '副教授',
+    position: '副院长（分管非学历教育）',
+    photo: '/img/person-4.jpg',
+    bio: '分管非学历教育部、培训中心及校企合作项目，负责市场开拓与对外联络工作。拥有丰富的企业高管培训与政企合作经验，致力于打造高端化、定制化的非学历培训品牌。',
+    achievements: [],
+    courses: [],
+    email: '',
+    office: '院办公楼 A 105'
+  },
+
+  'chen-ya': {
+    name: '陈雅',
+    honorific: '高级讲师',
+    position: '办公室主任',
+    photo: '/img/person-6.jpg',
+    bio: '负责学院办公室日常运转、对外接待、文秘档案及后勤保障工作。致力于提升学院行政服务效能与管理水平，为学院各项业务开展提供坚实的后勤支持。',
+    achievements: [],
+    courses: [],
+    email: '',
+    office: '院办公楼 A 201'
   }
 };
 

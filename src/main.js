@@ -183,6 +183,12 @@ function renderTeacherDetail() {
             case 'achievements':
             case 'courses': {
                 const items = teacher[key] || [];
+                if (items.length === 0) {
+                    // 行政岗的领导可能没有学术成果 / 主讲课程，整段隐藏
+                    const section = el.closest('[data-teacher-section]') || el.parentElement;
+                    section && section.classList.add('hidden');
+                    break;
+                }
                 el.replaceChildren(...items.map(text => {
                     const li = document.createElement('li');
                     li.className = 'flex gap-3';
@@ -198,6 +204,11 @@ function renderTeacherDetail() {
             default:
                 if (typeof teacher[key] === 'string') {
                     el.textContent = teacher[key];
+                    // 字符串字段为空时（比如某些领导没有公开邮箱），把所在容器隐藏
+                    if (teacher[key] === '') {
+                        const section = el.closest('[data-teacher-section]');
+                        section && section.classList.add('hidden');
+                    }
                 }
         }
     });

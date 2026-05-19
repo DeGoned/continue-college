@@ -293,11 +293,11 @@
             </h2>
             <p class="text-primary/70 text-base tracking-wide mb-6" data-teacher-field="position"></p>
             <div class="flex flex-wrap gap-x-8 gap-y-3 text-sm text-primary/60">
-              <span class="flex items-center gap-2">
+              <span class="flex items-center gap-2" data-teacher-section="email">
                 <i data-lucide="mail" class="w-4 h-4 text-primary/40"></i>
                 <a class="hover:text-primary transition-colors break-all" data-teacher-field="email"></a>
               </span>
-              <span class="flex items-center gap-2">
+              <span class="flex items-center gap-2" data-teacher-section="office">
                 <i data-lucide="map-pin" class="w-4 h-4 text-primary/40"></i>
                 <span data-teacher-field="office"></span>
               </span>
@@ -307,17 +307,17 @@
 
         <!-- 介绍内容（博达发文区域，默认黑字） -->
         <div class="max-w-4xl space-y-10 text-deep-black">
-          <div>
-            <h3 class="text-xl font-bold mb-3">教师简介</h3>
+          <div data-teacher-section="bio">
+            <h3 class="text-xl font-bold mb-3">个人简介</h3>
             <p class="text-base leading-loose" data-teacher-field="bio"></p>
           </div>
 
-          <div>
+          <div data-teacher-section="achievements">
             <h3 class="text-xl font-bold mb-3">学术成果与项目</h3>
             <ul class="space-y-2 text-base leading-relaxed" data-teacher-field="achievements"></ul>
           </div>
 
-          <div>
+          <div data-teacher-section="courses">
             <h3 class="text-xl font-bold mb-3">主讲课程</h3>
             <ul class="space-y-2 text-base leading-relaxed" data-teacher-field="courses"></ul>
           </div>
