@@ -166,7 +166,7 @@ function renderTeacherDetail() {
     hero && hero.classList.remove('hidden');
     body && body.classList.remove('hidden');
 
-    document.title = `${teacher.name} ${teacher.honorific} - 深圳技术大学继续教育学院`;
+    document.title = `${teacher.name} ${teacher.honorific} - 继续教育学院`;
 
     const fields = root.querySelectorAll('[data-teacher-field]');
     fields.forEach(el => {
